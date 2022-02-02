@@ -31,8 +31,7 @@ async def on_message(message):
             a = datetime.now()
             d[message.author]=a
         mess=message.content[1:]
-        lis=mess.split()
-        lis1=generate(lis[0])
+        lis1=generate(mess)
         if len(lis1)==1:
             await message.channel.send("No such coin in the db")
         else:
